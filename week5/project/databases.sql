@@ -11,6 +11,8 @@ primary key(municipality_iso_country )
 ); 
 
 
+
+
 drop table if exists airports_cities;
 CREATE TABLE IF NOT EXISTS airports_cities (
 name  VARCHAR(255),
@@ -40,6 +42,7 @@ primary key(arrival_id),
 foreign key(icao_code) references airports_cities(icao_code)
 ); 
 
+
 drop table if exists weathers;
 CREATE TABLE IF NOT EXISTS weathers (
 weather_id int auto_increment,
@@ -54,5 +57,24 @@ primary key(weather_id),
 foreign key( municipality_iso_country ) references cities( municipality_iso_country )
 
 ); 
+
+
+drop table if exists  df_cities;
+CREATE TABLE IF NOT EXISTS  df_cities (
+city varchar(255),
+mayor varchar(255),
+city_size varchar(255),
+elevation varchar(255),
+city_population varchar(255),
+urban_population varchar(255),
+metro_population varchar(255),
+lat varchar(255),
+longit varchar(255)
+
+); 
+
+
+
+
 
 
